@@ -2155,29 +2155,29 @@ if(eventCategory && adId){
 let re = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/g
 let match = null;
 let arr = []
-while((match = re.exec(html)) !== null){
-    arr.push(match[0])
-    // console.log(match)
+while ((match = re.exec(html)) !== null) {
+  arr.push(match[0])
+  // console.log(match)
 }
 
 let mySet = new Set(arr)
 let newArr = Array.from(mySet)
 // console.log(mySet)
 let ul = document.getElementById('myList')
+let re2 = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/
+for (let link of newArr) {
+  if ((match = re2.exec(link)) !== null) {
 
-for(let link of newArr){
-  if((match = re.exec(link)) !== null){
-   
-  let li = document.createElement('li')
-  let img = document.createElement('img')
-  let p = document.createElement('p')
-  img.setAttribute('src',match[0]);
-  let textNode = document.createTextNode(`${match[1]}.png`);
-  
-  li.appendChild(img)
-  li.appendChild(p)
-  p.appendChild(textNode)
-  ul.appendChild(li)
+    let li = document.createElement('li')
+    let img = document.createElement('img')
+    let p = document.createElement('p')
+    img.setAttribute('src', match[0]);
+    let textNode = document.createTextNode(`${match[1]}.png`);
+
+    li.appendChild(img)
+    li.appendChild(p)
+    p.appendChild(textNode)
+    ul.appendChild(li)
 
   }
 }

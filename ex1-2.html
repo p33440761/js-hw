@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: 0 auto;
+            text-align: center;
+            border: 3px solid #009FCC;
+            /*設定表格框線*/
+
+            border-collapse: collapse;
+            /*使表格框(table)跟每一格(column)的框不重複*/
+
+            background-color: #CCEEFF;
+
+            color: #44444e;
+
+        }
+
+        td {
+            padding-top: 10px;
+
+            padding-left: 18px;
+
+            padding-right: 10px;
+
+            padding-bottom: 10px;
+
+            width: 55px;
+
+            border: 2px solid #ffffff;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let obj01 = {
+            name: 'Alex',
+            age: 18,
+            eng_score: 87,
+            math_score: 90,
+        };
+
+        let obj02 = {
+            name: 'Bill',
+            age: 19,
+            eng_score: 95,
+            math_score: 98,
+        };
+        let obj03 = {
+            name: 'Cook',
+            age: 17,
+            eng_score: 100,
+            math_score: 73,
+        };
+        let arr = [obj01, obj02, obj03];
+
+        var len = arr.length;
+        var sum = '';
+
+
+        document.write("<table>")
+        document.write("<td>name</td>")
+
+        for (let i = 0; i < len; i++) {
+            sum = arr[i].name
+
+            document.write("<td>")
+            document.write(sum)
+            // document.write("<td>")
+        }
+
+
+
+
+        document.write('</tr>')
+        document.write("<td>age</td>")
+        var sum02 = ''
+        for (let i = 0; i < len; i++) {
+            sum02 = arr[i].age
+
+            document.write("<td>")
+            document.write(sum02)
+            // document.write("<td>")
+        }
+
+
+
+        document.write('</tr>')
+        document.write("<td>eng_score</td>")
+        var sum03 = ''
+        for (let i = 0; i < len; i++) {
+            sum03 = arr[i].eng_score
+
+            document.write("<td>")
+            document.write(sum03)
+            // document.write("<td>")
+        }
+
+
+        document.write('</tr>')
+        document.write("<td>math_score</td>")
+        var sum04 = ''
+        for (let i = 0; i < len; i++) {
+            sum04 = arr[i].math_score
+
+            document.write("<td>")
+            document.write(sum04)
+            // document.write("<td>")
+        }
+
+
+
+        document.write("</table>")
+    </script>
+</body>
+
+</html>

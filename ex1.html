@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             list-style-type: none;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            
+
         }
-        .wrap{
+
+        .wrap {
             background-color: #485461;
-background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+            background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
             height: 100vh;
             padding-top: 50px;
             padding-bottom: 50px;
-            
+
         }
-        .container{
+
+        .container {
             display: flex;
             justify-content: space-around;
             border-radius: 10px;
             width: 90%;
             margin: 0 auto;
-            
+
         }
-        ul{
+
+        ul {
             /* background: rgba(0, 0, 0, 0.7) */
             text-align: center;
             height: 380px;
@@ -40,12 +44,13 @@ background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
             /* border: 1px solid #000; */
             width: 15%;
             border-radius: 10px;
-            box-shadow:3px 3px 10px #333;
-            background: linear-gradient(-225deg, #D16BA5,#86A8E7,#5FFBF1);
+            box-shadow: 3px 3px 10px #333;
+            background: linear-gradient(-225deg, #D16BA5, #86A8E7, #5FFBF1);
             padding-bottom: 30px;
-            
+
         }
-        p{
+
+        p {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -59,55 +64,61 @@ background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
             border-radius: 50%;
             margin: 0 auto;
         }
-        p::after{
+
+        p::after {
             content: "";
-            width: 70px;
+            width: 50px;
             height: 1px;
             background: white;
             position: absolute;
-            left: 90px;
+            left: 85px;
         }
-        p::before{
+
+        p::before {
             content: "";
-            width: 70px;
+            width: 50px;
             height: 1px;
             background: white;
             position: absolute;
-            left: -80px;
-            
+            left: -55px;
+
         }
-        li{
-            background: linear-gradient(-35deg, #D16BA5,#86A8E7,#5FFBF1);
+
+        li {
+            background: linear-gradient(-35deg, #D16BA5, #86A8E7, #5FFBF1);
             display: flex;
             height: 50px;
             justify-content: space-around;
             align-items: center;
             /* border: 1px solid #000; */
             border-radius: 10px;
-            filter:drop-shadow(5px 5px 7px #333);
+            filter: drop-shadow(5px 5px 7px #333);
             width: 60%;
             margin: 0 auto;
             color: #333;
             font-size: 18px;
         }
-        .box{
+
+        .box {
             margin: 100px;
             display: flex;
 
         }
-        .box1{
+
+        .box1 {
             background: #ccc;
-            background: linear-gradient(-35deg, #D16BA5,#86A8E7,#5FFBF1);
+            background: linear-gradient(-35deg, #D16BA5, #86A8E7, #5FFBF1);
             width: 20%;
             height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #333;
-            filter:drop-shadow(5px 5px 7px #333);
+            filter: drop-shadow(5px 5px 7px #333);
         }
     </style>
 </head>
+
 <body>
     <section class="wrap">
         <div class="container">
@@ -116,62 +127,63 @@ background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
             <ul id="list03"></ul>
         </div>
         <div class="box">
-            <div class="container box1" id="average_eng_score"></div>  
-        <div class="container box1" id="average_math_score"></div> 
-        </div> 
+            <div class="container box1" id="average_eng_score"></div>
+            <div class="container box1" id="average_math_score"></div>
+        </div>
     </section>
 
-    
+
     <script>
-        let student =[]
-        let Alex ={
-            name:'Alex',
-            age:18,
-            eng_score:87,
-            math_score:90     
+        let student = []
+        let Alex = {
+            name: 'Alex',
+            age: 18,
+            eng_score: 87,
+            math_score: 90
         }
         let Bill = {
-            name:'Bill',
-            age:19,
-            eng_score:95,
-            math_score:98
+            name: 'Bill',
+            age: 19,
+            eng_score: 95,
+            math_score: 98
         }
-        let Cook ={
-            name:'Cook',
-            age:17,
-            eng_score:100,
-            math_score:73
+        let Cook = {
+            name: 'Cook',
+            age: 17,
+            eng_score: 100,
+            math_score: 73
         }
-        student.push(Alex,Bill,Cook)
+        student.push(Alex, Bill, Cook)
         console.log(student[0])
         let firstUl = document.getElementById('list01')
-        firstUl.insertAdjacentHTML("beforeend",`<p>${student[0].name}</p>`)
-        firstUl.insertAdjacentHTML("beforeend",`<li>age:${student[0].age}</li>`)
-        firstUl.insertAdjacentHTML("beforeend",`<li>eng_score:${student[0].eng_score}</li>`)
-        firstUl.insertAdjacentHTML("beforeend",`<li>math_score:${student[0].math_score}</li>`)
-        
-        let secondUl = document.getElementById('list02')
-        secondUl.insertAdjacentHTML("beforeend",`<p>${student[1].name}</p>`)
-        secondUl.insertAdjacentHTML("beforeend",`<li>age:${student[1].age}</li>`)
-        secondUl.insertAdjacentHTML("beforeend",`<li>eng_score:${student[1].eng_score}</li>`)
-        secondUl.insertAdjacentHTML("beforeend",`<li>math_score:${student[1].math_score}</li>`)
-        let thirdUl = document.getElementById('list03')
-        thirdUl.insertAdjacentHTML("beforeend",`<p>${student[2].name}</p>`)
-        thirdUl.insertAdjacentHTML("beforeend",`<li>age:${student[2].age}</li>`)
-        thirdUl.insertAdjacentHTML("beforeend",`<li>eng_score:${student[2].eng_score}</li>`)
-        thirdUl.insertAdjacentHTML("beforeend",`<li>math_score:${student[2].math_score}</li>`)
+        firstUl.insertAdjacentHTML("beforeend", `<p>${student[0].name}</p>`)
+        firstUl.insertAdjacentHTML("beforeend", `<li>age:${student[0].age}</li>`)
+        firstUl.insertAdjacentHTML("beforeend", `<li>eng_score:${student[0].eng_score}</li>`)
+        firstUl.insertAdjacentHTML("beforeend", `<li>math_score:${student[0].math_score}</li>`)
 
-        let average_eng_score = (student[0].eng_score+student[1].eng_score+student[2].eng_score)/student.length
-        let average_math_score = (student[0].math_score+student[1].math_score+student[2].math_score)/student.length
+        let secondUl = document.getElementById('list02')
+        secondUl.insertAdjacentHTML("beforeend", `<p>${student[1].name}</p>`)
+        secondUl.insertAdjacentHTML("beforeend", `<li>age:${student[1].age}</li>`)
+        secondUl.insertAdjacentHTML("beforeend", `<li>eng_score:${student[1].eng_score}</li>`)
+        secondUl.insertAdjacentHTML("beforeend", `<li>math_score:${student[1].math_score}</li>`)
+        let thirdUl = document.getElementById('list03')
+        thirdUl.insertAdjacentHTML("beforeend", `<p>${student[2].name}</p>`)
+        thirdUl.insertAdjacentHTML("beforeend", `<li>age:${student[2].age}</li>`)
+        thirdUl.insertAdjacentHTML("beforeend", `<li>eng_score:${student[2].eng_score}</li>`)
+        thirdUl.insertAdjacentHTML("beforeend", `<li>math_score:${student[2].math_score}</li>`)
+
+        let average_eng_score = (student[0].eng_score + student[1].eng_score + student[2].eng_score) / student.length
+        let average_math_score = (student[0].math_score + student[1].math_score + student[2].math_score) / student.length
 
         console.log(average_math_score)
 
         let engPrint = document.getElementById('average_eng_score')
-        engPrint.insertAdjacentHTML("beforeend",`<h2>average_eng_score:${average_eng_score}</h2>`)
+        engPrint.insertAdjacentHTML("beforeend", `<h2>average_eng_score:${average_eng_score}</h2>`)
         let mathPrint = document.getElementById('average_math_score')
-        mathPrint.insertAdjacentHTML("beforeend",`<h2>average_math_score:${average_math_score}</h2>`)
+        mathPrint.insertAdjacentHTML("beforeend", `<h2>average_math_score:${average_math_score}</h2>`)
 
 
     </script>
 </body>
+
 </html>
